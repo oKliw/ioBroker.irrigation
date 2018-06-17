@@ -1,0 +1,45 @@
+{
+    "common": {
+        "name": "irrigation",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial adapter",
+                "de": "Initiale Version"
+            }
+        },
+		"title": "Javascript/Node.js based irrigation adapter",
+        "titleLang": {
+            "en": "Javascript/Node.js based irrigation adapter",
+            "de": "Javascript / Node.js basierte Bewässerungssteuerung"
+        },
+        "desc": {
+            "en": "ioBroker irrigation Adapter",
+            "de": "ioBroker Irrigation Adapter"
+        },
+        "authors": [
+            "Wilko Waitz <info@waitz.biz>"
+        ],
+        "docs": {
+            "en": "docs/en/admin.md",
+            "de": "docs/de/admin.md"
+        },
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "icon": "irrigation.png",
+        "materialize": true,
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.irrigation/master/admin/irrigation.png",
+        "keywords": ["irrigation"],
+        "readme": "https://github.com/ioBroker/ioBroker.irrigation/blob/master/README.md",
+        "loglevel": "info",
+        "type": "general",
+        "restartAdapters": []
+    },
+    "native": {
+        "zones": 1
+    },
+    "objects": [
+
+    ]
+}

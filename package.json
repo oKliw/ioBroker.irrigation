@@ -1,0 +1,43 @@
+{
+  "name": "iobroker.irrigation",
+  "version": "0.0.1",
+  "description": "ioBroker irrigation Adapter",
+  "author": {
+    "name": "Wilko Waitz",
+    "email": "info@waitz.biz"
+  },
+  "contributors": [
+    {
+      "name": "Wilko Waitz",
+      "email": "info@waitz.biz"
+    }
+  ],
+  "homepage": "https://github.com/ioBroker/ioBroker.irrigation",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "irrigation",
+    "Smart Home",
+    "home automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioBroker/ioBroker.irrigation"
+  },
+  "dependencies": {
+    "semaphore": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "mocha": "^4.1.0",
+    "chai": "^4.1.2"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --exit"
+  },
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.irrigation/issues"
+  },
+  "readmeFilename": "README.md"
+}
