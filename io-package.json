@@ -29,9 +29,9 @@
         "icon": "irrigation.png",
         "materialize": true,
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.irrigation/master/admin/irrigation.png",
+        "extIcon": "https://github.com/oKliw/ioBroker.irrigation/master/admin/irrigation.png",
         "keywords": ["irrigation"],
-        "readme": "https://github.com/ioBroker/ioBroker.irrigation/blob/master/README.md",
+        "readme": "https://github.com/oKliw/ioBroker.irrigation/blob/master/README.md",
         "loglevel": "info",
         "type": "general",
         "restartAdapters": []

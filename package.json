@@ -12,7 +12,7 @@
       "email": "info@waitz.biz"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.irrigation",
+  "homepage": "https://github.com/oKliw/ioBroker.irrigation",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.irrigation"
+    "url": "https://github.com/oKliw/ioBroker.irrigation"
   },
   "dependencies": {
     "semaphore": "^1.1.0"
@@ -37,7 +37,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.irrigation/issues"
+    "url": "https://github.com/oKliw/ioBroker.irrigation/issues"
   },
   "readmeFilename": "README.md"
 }
