@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "news": {
+            "0.0.4": {
+                "en": "Max present limit changed to 15 mm",
+                "de": "Max present limit changed to 15 mm"
+            },
             "0.0.3": {
               "en": "Max present limit changed to 15 mm",
               "de": "Max present limit changed to 15 mm"
@@ -16,10 +20,10 @@
                 "de": "Initiale Version"
             }
         },
-		"title": "Javascript/Node.js based irrigation adapter",
+		"title": "Irrigation adapter",
         "titleLang": {
-            "en": "Javascript/Node.js based irrigation adapter",
-            "de": "Javascript / Node.js basierte Bewässerungssteuerung"
+            "en": "Irrigation adapter",
+            "de": "Adapter zur Bewässerungssteuerung"
         },
         "desc": {
             "en": "ioBroker irrigation Adapter",
@@ -45,7 +49,8 @@
         "restartAdapters": []
     },
     "native": {
-        "zones": 1
+        "zones": 1,
+        "timeframes": 1
     },
     "objects": [
 
