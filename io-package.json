@@ -4,8 +4,8 @@
         "version": "0.0.4",
         "news": {
             "0.0.4": {
-                "en": "Max present limit changed to 15 mm",
-                "de": "Max present limit changed to 15 mm"
+                "en": "Start condition changed",
+                "de": "Startbedingung geaendert"
             },
             "0.0.3": {
               "en": "Max present limit changed to 15 mm",
