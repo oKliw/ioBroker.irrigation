@@ -72,7 +72,6 @@ adapter.on('ready', function () {
 function main() {
     adapter.log.info('Start irrigation adapter');
     controllers = [];
-    let semaphore = require('semaphore')(1);
 
     adapter.setObject('zone', {
         common: {
@@ -133,13 +132,13 @@ function main() {
                     let zone = new Zone(adapter, channels[i]._id);
                     zone.delete();
                 } else {
-                    controllers.push(new ZoneController(adapter, configured.shift(), semaphore));
+                    controllers.push(new ZoneController(adapter, configured.shift()));
                 }
             }
 
             configured.forEach(function(current) {
                 current.create();
-                controllers.push(new ZoneController(adapter, current, semaphore));
+                controllers.push(new ZoneController(adapter, current));
             });
 
             configured = [];
