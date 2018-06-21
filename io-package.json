@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "news": {
+            "0.0.5": {
+                "en": "Precipitaton bug fixed",
+                "de": "Niederschlagsmengen bug fixed"
+            },
             "0.0.4": {
                 "en": "Start condition changed",
                 "de": "Startbedingung geaendert"
