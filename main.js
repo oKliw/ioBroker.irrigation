@@ -107,7 +107,9 @@ function main() {
                 let timeframe = new Timeframe(adapter, channels[i]._id);
                 timeframe.delete();
             } else {
-                timeframes.push(configured.shift());
+                let timeframe = configured.shift();
+                timeframe.create();
+                timeframes.push(timeframe);
             }
         }
 
@@ -132,7 +134,9 @@ function main() {
                     let zone = new Zone(adapter, channels[i]._id);
                     zone.delete();
                 } else {
-                    controllers.push(new ZoneController(adapter, configured.shift()));
+                    let zone = configured.shift();
+                    zone.create();
+                    controllers.push(new ZoneController(adapter, zone));
                 }
             }
 
