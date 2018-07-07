@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "news": {
+            "0.1.1": {
+              "en": "Init value handling fixed",
+              "de": "Behandlung der Initialwerte gefixt"
+            },
             "0.1.0": {
                 "en": "Seed time handling corrected",
                 "de": "Saatzeit-Behandlung verbessert"
