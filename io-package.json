@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.0.6",
+        "version": "0.1.0",
         "news": {
+            "0.1.0": {
+                "en": "Seed time handling corrected",
+                "de": "Saatzeit-Behandlung verbessert"
+            },
             "0.0.6": {
                 "en": "Seed time added",
                 "de": "Saatzeit hinzugefügt"
@@ -28,14 +32,14 @@
                 "de": "Initiale Version"
             }
         },
-		"title": "Irrigation adapter",
+		"title": "Irrigation",
         "titleLang": {
-            "en": "Irrigation adapter",
-            "de": "Adapter zur Bewässerungssteuerung"
+            "en": "Irrigation control",
+            "de": "Bewässerungssteuerung"
         },
         "desc": {
-            "en": "ioBroker irrigation Adapter",
-            "de": "ioBroker Irrigation Adapter"
+            "en": "Calculates the irrigation time based on evatranspiration",
+            "de": "Berechnet die Bewässerungszeiten für die automatische Bewässerung anhand der Verdunstungsrat"
         },
         "authors": [
             "Wilko Waitz <info@waitz.biz>"
@@ -49,11 +53,11 @@
         "icon": "irrigation.png",
         "materialize": true,
         "enabled": true,
-        "extIcon": "https://github.com/oKliw/ioBroker.irrigation/master/admin/irrigation.png",
+        "extIcon": "https://github.com/oKliw/ioBroker.irrigation/blob/master/admin/irrigation.png",
         "keywords": ["irrigation"],
         "readme": "https://github.com/oKliw/ioBroker.irrigation/blob/master/README.md",
         "loglevel": "info",
-        "type": "general",
+        "type": "garden",
         "restartAdapters": []
     },
     "native": {
