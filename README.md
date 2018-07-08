@@ -19,14 +19,21 @@ Soll zwischen 8 Uhr morgens und 9 Uhr morgen überprüft werden, ob zu bewässer
 
 ### Bewässerungszeit (Zeitrahmen) - Verhalten
 
-Bewässerungszeit bedeutet nicht, das nur in diesen Zeiten bewässert wird. In der Tat wird nur in dieser Zeiten überprüft,
-ob die Bewässerung starten sollte. 
+Bewässerungszeit sind nur Überprüfungspunkte ob eine Zone starten soll. Die tatsächliche Bewässerungszeit 
+kann weit über den ``end`` Wert reichen. 
 
-Im Detail: Eine Zone signalisiert ihre Ausführungsbereitschaft durch den Zustand ```isScheduled```. Diesen Zustand
+**Im Detail**
+
+Eine Zone signalisiert ihre Ausführungsbereitschaft durch den Zustand ```isScheduled```. Diesen Zustand
 ermittelt sie jede Minute. Der Adapter wechselt dann selbst in den Zustand ``isScheduled``. Dies ist eine berechnete 
 Eigenschaft über alle Zonen. Sobald die Bewässerungszeit erreicht ist, wechselt der Adapter in den Zustand ```isRunning``` 
-sofern ``isSchedules`` aktiv ist. 
+sofern ``isSchedules`` aktiv ist. Sind alle anderen Randbedinungen erfüllt wird jede Zone, welche bewässern möchte,
+dies bis zur Erfüllung ihrer Aufgabe tun.
 
+Ist der Zeitramen bis 20 Uhr und 19:55 entscheidet eine Zone, das sie bewässern möchte, wird diese gestartet. Die Zone
+selbst hat die Hoheit darüber wie lang sie dies tut. Sie kann auch bis 23 Uhr ihren Dienst verrichte, um die Aufgabeb zu
+erfüllen. Entscheidet eine Zone 20:05, das es Zeit wäre, muss diese sich bis um nächsten Zeitfenster gedulden.
+ 
 **Wichtig**
 
 ``isRunning`` des Adapters ist nicht gleichbedeutend mit der tatsächlichen Bewässerung einer Zone. Der Adapter beginnt erst
@@ -101,7 +108,7 @@ wird ausgedrückt, wie lang diese Zone bewässern wird, um den ``settings.requir
 
 ##### ``isRunning``
 
-Wird vom Adapter gesetzt und signalisiert der Zone, das die Bewässerung starten soll.
+Wird vom Adapter gesetzt und signalisiert der Zone, das die Bewässerung starten oder stopen soll.
 
 ##### ``temperature``
 
