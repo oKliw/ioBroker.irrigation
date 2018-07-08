@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "news": {
+            "0.1.2": {
+                "en": "seed time will be irrigate if humidity lower than 90%",
+                "de": "Während der Saatzeit wird die Bewässerung bei einer Feuchtigkeit kleiner als 90% starten"
+            },
             "0.1.1": {
               "en": "Init value handling fixed",
               "de": "Behandlung der Initialwerte gefixt"
