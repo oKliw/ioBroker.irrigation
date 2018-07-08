@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "news": {
+            "0.1.3": {
+                "en": "README.md updated",
+                "de": "REAMET.md aktualisiert"
+            },
             "0.1.2": {
                 "en": "seed time will be irrigate if humidity lower than 90%",
                 "de": "Während der Saatzeit wird die Bewässerung bei einer Feuchtigkeit kleiner als 90% starten"
