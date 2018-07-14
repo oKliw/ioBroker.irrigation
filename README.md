@@ -119,13 +119,42 @@ Der ``isReady`` Zustand kännte auch für einen Party-Modus verwendet werden. We
 eigentlich grillen will. :)
 
 ## Changelog
-## 0.0.3 (2018-07-14)
+### 0.1.5 (2018-07-14)
+* Dokumentation erweitert
+
+### 0.1.4 (2018-07-14)
+* Aussaatmodus wieder entfernt. Die Erhöhung von ``settings.trigger`` erfüllt den gleichen Zweck
+* Bug in der Behandlung des Niederschlags gefixt. Der Wert kann nun nicht mehr ``null`` werden.
+
+### 0.1.3 (2018-07-14)
+* Dokumentation erweitert
+
+### 0.1.2 (2018-07-14)
+* Während der Saatzeit wird die Bewässerung bei einer Feuchtigkeit kleiner als 90% starten
+ 
+### 0.1.1 (2018-07-14)
+* Behandlung von Initialwerten verbessert 
+
+### 0.1.0 (2018-07-14)
+* Aussaatmodus verbessert 
+
+### 0.0.6 (2018-07-14)
+* Aussaatmodus hinzugefügt 
+
+### 0.0.5 (2018-07-14)
+* Der Niederschlag wird nicht mehr von der Feuchtigkeit einer Zone abgezogen sondern korrekterweise erhöht der 
+Niederschlag die vorhandene Bodenfeuchtigkeit. 
+
+### 0.0.4 (2018-07-14)
+* Bedingungen wann der Adapter eine Zone startet wurden gehändert
+
+### 0.0.3 (2018-07-14)
 * Die vorhandenen Feuchtigkeit kann nicht mehr größer als 15 mm werden
 
-## 0.0.2 (2018-07-14)
+### 0.0.2 (2018-07-14)
 * Status zur Niederschlagserfassung hinzugefügt
 
-## 0.0.1 (2018-07-14)
+### 0.0.1 (2018-07-14)
 * Initiale Version
 
 ## License
