@@ -45,92 +45,96 @@ besitzt.
 Zustand auf ``false`` setzen, wenn der Rasenmäher noch unterwegs ist oder wenn es regent. Wechselt der Status von``isReady``
 während der Bewässerung auf ``false``, bricht der Adapter den aktuellen Vorgang ab.
 
-## Bewässerungsadapter
+### Bewässerungsadapter
 
-### Steuerung des Adapters
+Kommt noch
 
-## Bewässerungszonen
+#### Steuerung des Adapters
 
-### Konfiguration einer Zone
+Kommt noch
+
+### Bewässerungszonen
+
+#### Konfiguration einer Zone
 
 Jede Bewässerungszone kann einzeln konfiguriert werden, um den örtlichen Gegebenheiten Rechnung zu tragen. Die Konfiguration 
 wird im Datenpunkt ``settings`` vorgenommen.
 
-#### ``settings.temperature``
+##### settings.temperature
 
 ``settings.temperature`` bezeichnet einen Refernenzwert. Auf dieser Basis wird die Verdunstungsrate (pro Minute) berechnet. Die 
 Grundannahme ist, dass die Bewässerung für diese Zone jeden Tag starten wird, sollte der Tagesdurchschnitt über diesem 
 Werte liegen und nur ein Bewässerungszeit aller 24h konfiguriert sein.
 
-#### ``settings.required``
+##### ``settings.required``
 
 Dieser Wert gibt an, bis zu welchem angenommen Wert die Bewässerung aktiv sein wird. Dieser Wert ist auch die Basis für
 die Feuchtigkeitsberechnung.
 
-#### ``settings.output``
+##### ``settings.output``
 
 Mit dieser Einstellung wird die Frage beantwortet, wie Leistungsfähig die Bewässerungsanlage in dieser Zone ist. Die
 Angabe erfolgt in mm/min. Dieser Wert lässt sich beispielsweise durch eine einfache Messung ermitteln. Stellt ein Messglas
 in die Zone und lasst diese eine Stunde bewässern. Die abgelesene Höhe teilt ihr durch 60 und tragt dann das Ergebnis für 
 diese Zone ein.
 
-#### ``settings.trigger``
+##### ``settings.trigger``
 
 Hier kann eingesellt werden ob diese Zone vor dem erreichen eines Feuchtigkeitswerts von 0% diese Zone in den Status 
 ``isScheduled`` wechselt. Die Angabe erfogt in %.
 
-#### ``settings.isAutomatic``
+##### ``settings.isAutomatic``
 
 Diese Eigenschaft wird über den Adapter gesteuert, kann aber auch einzeln gesetzt werden. Ist der Automatikmodus
 deaktiviert, wird die Verdungstungsrate weiterhin berechnet aber diese Zone nimmt nicht an der *automatischen* 
 Bewässerung teil und muss von Hand gestartet werden.
 
-### Eigenschaften einer Zone
+#### Eigenschaften einer Zone
 
-#### Berechnete Eigenschaften
+##### Berechnete Eigenschaften
 
-##### ``evapotranspiration``
+###### ``evapotranspiration``
 
 Spiegelt die Verdunstungrate in der aktuellen Minute lt. Berechnung wider.
 
-##### ``present``
+###### ``present``
 
 Diese Eigenschaft wird auf Basis der Verdunstungsrate berechnet und nimmt jede Minute um die aktuelle Verdunstungsrate
 ab, sofern nicht bewässert wird. Im Falle der aktiven Bewässerung nimmt diese Eigenschaft um den Wert ``settings.output`` 
 pro Minute zu. Der Wert kann nicht unter 0 mm fallen und nicht größer als 15 mm werden.
 
-#### Abgeleitete Eigenschaften
+##### Abgeleitete Eigenschaften
 
-##### ``humidity``
+###### ``humidity``
 
 Ist das Verhältnis aus `settings.required`` und ``present`` in %
 
-##### ``isScheduled``
+###### ``isScheduled``
 
 Diese Eigenschaft wird aktiv, wenn ``humidity`` unter den Schwellwert ``settings.trigger`` fällt.
 
-##### ``minutes``
+###### ``minutes``
 
 Bezeichnet die Laufzeit in Minuten in Abhängigkeit von ``present``, ``setttings.output`` und ``settings.required``. Damit
 wird ausgedrückt, wie lang diese Zone bewässern wird, um den ``settings.required`` Wert zu erreichen.
 
-#### Externe Eigenschaften
+##### Externe Eigenschaften
 
-##### ``isRunning``
+###### ``isRunning``
 
 Wird vom Adapter gesetzt und signalisiert der Zone, dass die Bewässerung starten oder stopen soll.
 
-##### ``temperature``
+###### ``temperature``
 
 Wird vom Adapter oder einer anderen Quelle gesetzt und stellt die aktuelle Umgebungstemperatur der Zone dar. Auf Basis
 dieses Wertes wird die aktuelle Verdunstungsrate berechnet.
 
-## Abgrenzung
+### Abgrenzung
 
 In der aktullen Version steuert diese Adapter keine Geräte/externen Zustände. Dies ist für die Zukunft geplant aber noch
 nicht implementiert. Die ``isReady`` Eigenschaft muss von außen gesetzt werden.
 
-## Aktuelle Szenarien und deren Steuerung.
+### Aktuelle Szenarien und deren Steuerung.
 
 Ich verwende den Javascript Adapter um auf das Ereignis ``isRunning`` einer Zone zu reagieren und schalte damit die
 entsprechenden Ventile. Den Javascript Adapter verwende ich auch, um den ``isReady`` Zustand zu steuern. Signalisieren meine Sensoren das es regnet
@@ -145,6 +149,10 @@ eigentlich grillen will. :)
  
  
 ## Changelog
+
+### 0.0.1
+
+- Initiale Version
 
 ## License
 The MIT License (MIT)
