@@ -16,7 +16,7 @@ Soll zwischen 8 Uhr morgens und 9 Uhr morgen überprüft werden, ob zu bewässer
 * 8 * 60 = 480
 * 9 * 60 = 540
 
-### Bewässerungszeit (Zeitrahmen) - Verhalten
+## Bewässerungszeit (Zeitrahmen) - Verhalten
 Bewässerungszeit sind nur Überprüfungspunkte ob eine Zone starten soll. Die tatsächliche Bewässerungszeit 
 kann weit über den ``end`` Wert reichen. 
 
@@ -43,7 +43,7 @@ besitzt.
 Zustand auf ``false`` setzen, wenn der Rasenmäher noch unterwegs ist oder wenn es regent. Wechselt der Status von``isReady``
 während der Bewässerung auf ``false``, bricht der Adapter den aktuellen Vorgang ab.
 
-### Bewässerungsadapter
+## Bewässerungsadapter
 
 #### Steuerung des Adapters
 Kommt noch
