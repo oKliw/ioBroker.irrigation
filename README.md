@@ -7,7 +7,7 @@ Der Adapter unterstützt mehrere Bewässerungszonen und mehrere Bewässerungszei
 für dem gesamten Adapter konfiguriert werden. Die Zone entscheidet, ob eine Bewässerung innerhalb der aktuellen Bewässerungszeit
 notwendig ist.
 
-##Beschreibung
+## Beschreibung
 
 ### Bewässerungszeit (Zeitrahmen)
 Die Anzahl der Bewässerungszeiten kann in der Adapterkonfiguration festgelegt werden. Für jede konfigurierte Zeit kann 
