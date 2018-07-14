@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.1.3",
+        "version": "0.1.4",
         "news": {
+            "0.1.4": {
+                "en": "seed time mode removed. This behavior is same as trigger change",
+                "de": "Aussaatmodus entfernt. Dieses Verhalten ist gleich der Erhöhung des Triggers"
+            },
             "0.1.3": {
                 "en": "README.md updated",
                 "de": "REAMET.md aktualisiert"
