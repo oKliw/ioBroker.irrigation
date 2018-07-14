@@ -8,7 +8,6 @@ für dem gesamten Adapter konfiguriert werden. Die Zone entscheidet, ob eine Bew
 notwendig ist.
 
 ## Bewässerungszeit (Zeitrahmen)
-
 Die Anzahl der Bewässerungszeiten kann in der Adapterkonfiguration festgelegt werden. Für jede konfigurierte Zeit kann 
 die Anfangs- und Endeminute festgelegt werden. Die Minutenangaben bezieht sich auf die Minute des Tages. 
 
@@ -18,7 +17,6 @@ Soll zwischen 8 Uhr morgens und 9 Uhr morgen überprüft werden, ob zu bewässer
 * 9 * 60 = 540
 
 ### Bewässerungszeit (Zeitrahmen) - Verhalten
-
 Bewässerungszeit sind nur Überprüfungspunkte ob eine Zone starten soll. Die tatsächliche Bewässerungszeit 
 kann weit über den ``end`` Wert reichen. 
 
@@ -47,21 +45,16 @@ während der Bewässerung auf ``false``, bricht der Adapter den aktuellen Vorgan
 
 ### Bewässerungsadapter
 
-Kommt noch
-
 #### Steuerung des Adapters
-
 Kommt noch
 
 ### Bewässerungszonen
 
 #### Konfiguration einer Zone
-
 Jede Bewässerungszone kann einzeln konfiguriert werden, um den örtlichen Gegebenheiten Rechnung zu tragen. Die Konfiguration 
 wird im Datenpunkt ``settings`` vorgenommen.
 
 ##### settings.temperature
-
 ``settings.temperature`` bezeichnet einen Refernenzwert. Auf dieser Basis wird die Verdunstungsrate (pro Minute) berechnet. Die 
 Grundannahme ist, dass die Bewässerung für diese Zone jeden Tag starten wird, sollte der Tagesdurchschnitt über diesem 
 Werte liegen und nur ein Bewässerungszeit aller 24h konfiguriert sein.
