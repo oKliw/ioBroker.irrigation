@@ -7,7 +7,9 @@ Der Adapter unterstützt mehrere Bewässerungszonen und mehrere Bewässerungszei
 für dem gesamten Adapter konfiguriert werden. Die Zone entscheidet, ob eine Bewässerung innerhalb der aktuellen Bewässerungszeit
 notwendig ist.
 
-## Bewässerungszeit (Zeitrahmen)
+##Beschreibung
+
+### Bewässerungszeit (Zeitrahmen)
 Die Anzahl der Bewässerungszeiten kann in der Adapterkonfiguration festgelegt werden. Für jede konfigurierte Zeit kann 
 die Anfangs- und Endeminute festgelegt werden. Die Minutenangaben bezieht sich auf die Minute des Tages. 
 
@@ -16,7 +18,7 @@ Soll zwischen 8 Uhr morgens und 9 Uhr morgen überprüft werden, ob zu bewässer
 * 8 * 60 = 480
 * 9 * 60 = 540
 
-## Bewässerungszeit (Zeitrahmen) - Verhalten
+### Bewässerungszeit (Zeitrahmen) - Verhalten
 Bewässerungszeit sind nur Überprüfungspunkte ob eine Zone starten soll. Die tatsächliche Bewässerungszeit 
 kann weit über den ``end`` Wert reichen. 
 
@@ -43,7 +45,7 @@ besitzt.
 Zustand auf ``false`` setzen, wenn der Rasenmäher noch unterwegs ist oder wenn es regent. Wechselt der Status von``isReady``
 während der Bewässerung auf ``false``, bricht der Adapter den aktuellen Vorgang ab.
 
-## Bewässerungsadapter
+### Bewässerungsadapter
 
 #### Steuerung des Adapters
 Kommt noch
@@ -59,25 +61,21 @@ wird im Datenpunkt ``settings`` vorgenommen.
 Grundannahme ist, dass die Bewässerung für diese Zone jeden Tag starten wird, sollte der Tagesdurchschnitt über diesem 
 Werte liegen und nur ein Bewässerungszeit aller 24h konfiguriert sein.
 
-##### ``settings.required``
-
+##### settings.required
 Dieser Wert gibt an, bis zu welchem angenommen Wert die Bewässerung aktiv sein wird. Dieser Wert ist auch die Basis für
 die Feuchtigkeitsberechnung.
 
-##### ``settings.output``
-
+##### settings.output
 Mit dieser Einstellung wird die Frage beantwortet, wie Leistungsfähig die Bewässerungsanlage in dieser Zone ist. Die
 Angabe erfolgt in mm/min. Dieser Wert lässt sich beispielsweise durch eine einfache Messung ermitteln. Stellt ein Messglas
 in die Zone und lasst diese eine Stunde bewässern. Die abgelesene Höhe teilt ihr durch 60 und tragt dann das Ergebnis für 
 diese Zone ein.
 
-##### ``settings.trigger``
-
+##### settings.trigger
 Hier kann eingesellt werden ob diese Zone vor dem erreichen eines Feuchtigkeitswerts von 0% diese Zone in den Status 
 ``isScheduled`` wechselt. Die Angabe erfogt in %.
 
-##### ``settings.isAutomatic``
-
+##### settings.isAutomatic
 Diese Eigenschaft wird über den Adapter gesteuert, kann aber auch einzeln gesetzt werden. Ist der Automatikmodus
 deaktiviert, wird die Verdungstungsrate weiterhin berechnet aber diese Zone nimmt nicht an der *automatischen* 
 Bewässerung teil und muss von Hand gestartet werden.
@@ -86,23 +84,21 @@ Bewässerung teil und muss von Hand gestartet werden.
 
 ##### Berechnete Eigenschaften
 
-###### ``evapotranspiration``
-
+###### evapotranspiration
 Spiegelt die Verdunstungrate in der aktuellen Minute lt. Berechnung wider.
 
-###### ``present``
-
+###### present
 Diese Eigenschaft wird auf Basis der Verdunstungsrate berechnet und nimmt jede Minute um die aktuelle Verdunstungsrate
 ab, sofern nicht bewässert wird. Im Falle der aktiven Bewässerung nimmt diese Eigenschaft um den Wert ``settings.output`` 
 pro Minute zu. Der Wert kann nicht unter 0 mm fallen und nicht größer als 15 mm werden.
 
 ##### Abgeleitete Eigenschaften
 
-###### ``humidity``
+###### humidity
 
 Ist das Verhältnis aus `settings.required`` und ``present`` in %
 
-###### ``isScheduled``
+###### isScheduled
 
 Diese Eigenschaft wird aktiv, wenn ``humidity`` unter den Schwellwert ``settings.trigger`` fällt.
 
