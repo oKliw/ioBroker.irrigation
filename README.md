@@ -1,7 +1,7 @@
 ![Logo](admin/irrigation.png)
 # ioBroker.irrigation
 Dieser Adapter berechnet die Bewässerungszeiten Anhand einer theoretischen Verdunstungsrate. Die Verdunstungsrate steigt 
-mit dem Quadart der Temperatur. 
+linear mit der aktuellen Temperatur. 
 
 Der Adapter unterstützt mehrere Bewässerungszonen und mehrere Bewässerungszeiten. Dabei ist wichtig, das die Bewässerungszeiten
 für dem gesamten Adapter konfiguriert werden. Die Zone entscheidet, ob eine Bewässerung innerhalb der aktuellen Bewässerungszeit
@@ -119,6 +119,10 @@ Der ``isReady`` Zustand kännte auch für einen Party-Modus verwendet werden. We
 eigentlich grillen will. :)
 
 ## Changelog
+### 0.1.6 (2018-07-24)
+* Die Verdunstungsrate ist nun linear zur aktuellen Temperatur
+* Settingswerte werden nach der Aktualisierung des Adapters nicht mehr überschrieben.
+
 ### 0.1.5 (2018-07-14)
 * Dokumentation erweitert
 
