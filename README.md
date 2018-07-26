@@ -119,6 +119,9 @@ Der ``isReady`` Zustand kännte auch für einen Party-Modus verwendet werden. We
 eigentlich grillen will. :)
 
 ## Changelog
+### 0.2.1 (2018-07-26)
+* Rekursion ohne Abbbruchbedingung entfernt
+
 ### 0.2.0 (2018-07-26)
 * Status mit falscher benahmung geändert
 * Einführung einer Sensor-Gruppe um die Status besser abzubilden.

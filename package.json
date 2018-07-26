@@ -1,6 +1,6 @@
 {
   "name": "iobroker.irrigation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ioBroker irrigation Adapter",
   "author": {
     "name": "Wilko Waitz",

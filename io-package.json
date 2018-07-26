@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "news": {
+            "0.2.1": {
+                "en": "Infinite recursion removed",
+                "de": "Rekursion ohne Abbruchbedingung entfernt."
+            },
             "0.2.0": {
                 "en": "Evaporation language mismatch correct. Evaporation calculation changed to haude formular.",
                 "de": "Verdunstung wird nun nach der Haude-Formel für die potentielle Verdunstung berechnet"
