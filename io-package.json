@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.1.6",
+        "version": "0.2.0",
         "news": {
+            "0.2.0": {
+                "en": "Evaporation language mismatch correct. Evaporation calculation changed to haude formular."
+                "de": "Verdunstung wird nun nach der Haude-Formel für die potentielle Verdunstung berechnet"
+            },
             "0.1.6": {
                 "en": "Evatranpiration calculation changed to linear function",
                 "de": "Verdunstungsberechnung in eine linearen funktion geändert"

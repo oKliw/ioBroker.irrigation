@@ -119,6 +119,13 @@ Der ``isReady`` Zustand kännte auch für einen Party-Modus verwendet werden. We
 eigentlich grillen will. :)
 
 ## Changelog
+### 0.2.0 (2018-07-26)
+* Status mit falscher benahmung geändert
+* Einführung einer Sensor-Gruppe um die Status besser abzubilden.
+* Der Adapter selbst enthätl keine Sensorwerte mehr. Skripte müssen nun die Sensorwerte der jeweiligen Zone setzen.
+* Die lineare Verdunstungsberechnung wurde durch die Haude-Formel ersetzt, diese Berücksichtig nun auch die relative Fechtigkeit
+* [Geplant] Die Algorithmen zur Verdunstungsbrechnung sollen konfigurierbar werden.
+
 ### 0.1.6 (2018-07-24)
 * Die Verdunstungsrate ist nun linear zur aktuellen Temperatur
 * Settingswerte werden nach der Aktualisierung des Adapters nicht mehr überschrieben.
