@@ -1,7 +1,7 @@
 ![Logo](admin/irrigation.png)
 # ioBroker.irrigation
-Dieser Adapter berechnet die Bewässerungszeiten Anhand einer theoretischen Verdunstungsrate. Die Verdunstungsrate steigt 
-linear mit der aktuellen Temperatur. 
+Dieser Adapter berechnet die Bewässerungszeiten Anhand einer theoretischen Verdunstungsrate. Die Verdunstungsrate wird 
+mit der Haude-Formel berechnet. 
 
 Der Adapter unterstützt mehrere Bewässerungszonen und mehrere Bewässerungszeiten. Dabei ist wichtig, das die Bewässerungszeiten
 für dem gesamten Adapter konfiguriert werden. Die Zone entscheidet, ob eine Bewässerung innerhalb der aktuellen Bewässerungszeit
