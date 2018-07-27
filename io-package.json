@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "irrigation",
-        "version": "0.2.1",
+        "version": "0.2.2",
         "news": {
+            "0.2.2": {
+                "en": "Deletion of not existings states produce no warning anymore",
+                "de": "Das Löschen nicht vorhandener Status erzeugt keine Warnungen mehr"
+            },
             "0.2.1": {
                 "en": "Infinite recursion removed",
                 "de": "Rekursion ohne Abbruchbedingung entfernt."
