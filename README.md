@@ -120,7 +120,7 @@ eigentlich grillen will. :)
 
 ## Changelog
 ### 0.2.2 (2018-07-27)
-* Das löschen alter Zustände, welche nicht mehr existieren, erzegut keine Warnung mehr
+* Das Löschen alter Zustände, welche nicht mehr existieren, erzeugt keine Warnung mehr
 
 ### 0.2.1 (2018-07-26)
 * Rekursion ohne Abbbruchbedingung entfernt
