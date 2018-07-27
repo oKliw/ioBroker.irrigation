@@ -119,6 +119,9 @@ Der ``isReady`` Zustand kännte auch für einen Party-Modus verwendet werden. We
 eigentlich grillen will. :)
 
 ## Changelog
+### 0.2.2 (2018-07-27)
+* Das löschen alter Zustände, welche nicht mehr existieren, erzegut keine Warnung mehr
+
 ### 0.2.1 (2018-07-26)
 * Rekursion ohne Abbbruchbedingung entfernt
 
